@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Skydiving Formations - React version
+
+**Note**: *This is in early development*.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
