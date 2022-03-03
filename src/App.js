@@ -18,7 +18,7 @@ const query = `
 `;
 
 function App() {
-  const [page, setPage] = useState(null);
+  const [formation, setFormation] = useState(null);
 
   useEffect(() => {
     window
@@ -36,19 +36,19 @@ function App() {
           console.error(errors);
         }
 
-        setPage(data.formationCollection.items[0]);
+        setFormation(data.formationCollection.items[0]);
       });
   }, []);
 
-  if (!page) {
+  if (!formation) {
     return "Loading...";
   }
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={page.diagram.url} className="App-diagram" alt="diagram" />
-        <p>{page.name}</p>
+        <img src={formation.diagram.url} className="App-diagram" alt="diagram" />
+        <p>{formation.name}</p>
       </header>
     </div>
   );
