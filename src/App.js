@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 
+const delivery_api_token = process.env.REACT_APP_DELIVERY_API_TOKEN;
 const space_id = process.env.REACT_APP_SPACE_ID;
-const access_token = process.env.REACT_APP_DELIVERY_TOKEN;
 
 function App() {
   const [formationSize, setFormationSize] = useState(8);
@@ -29,7 +29,7 @@ function App() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${access_token}`,
+          Authorization: `Bearer ${delivery_api_token}`,
         },
         body: JSON.stringify({ query }),
       })
