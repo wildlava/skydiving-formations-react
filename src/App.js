@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const query = `
     {
-      formationCollection(where: { size: ${formationSize} }, order: [code_ASC]) {
+      formationCollection(limit: 2000, where: { size: ${formationSize} }, order: [code_ASC]) {
         items {
           name
           code
