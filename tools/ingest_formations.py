@@ -42,9 +42,6 @@ with open(FORMATION_INDEX, 'r') as formation_file:
         formation_size = int(formation_code.split('-')[0])
         formation_filename = formation_code + '.png'
 
-        # if formation_code < '10-017' or formation_code > '10-017':
-        #     continue
-
         print(formation_code, formation_name)
 
         # Create a new upload to get the image into Contentful
